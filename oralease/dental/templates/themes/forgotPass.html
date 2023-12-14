@@ -2,7 +2,7 @@
 <!DOCTYPE html> 
 <html lang="en">
 	
-<!-- doccure/login.html  30 Nov 2019 04:12:20 GMT -->
+<!-- doccure/forgot-password.html  30 Nov 2019 04:12:20 GMT -->
 <head>
 		<meta charset="utf-8">
 		<title>Doccure</title>
@@ -58,7 +58,6 @@
 							</a>
 						</div>
 						<ul class="main-nav">
-							
 					</div>		 
 					<ul class="nav header-navbar-rht">
 						<li class="nav-item contact-item">
@@ -67,8 +66,9 @@
 							</div>
 							<div class="header-contact-detail">
 								<p class="contact-header">Contact</p>
-								<p class="contact-info-header"> +1 315 369 5943</p>
+								<p class="contact-info-header"> +63 9637411286</p>
 							</div>
+						</li>
 						
 					</ul>
 				</nav>
@@ -82,41 +82,36 @@
 					<div class="row">
 						<div class="col-md-8 offset-md-2">
 							
-							<!-- Login Tab Content -->
+							<!-- Account Content -->
 							<div class="account-content">
 								<div class="row align-items-center justify-content-center">
 									<div class="col-md-7 col-lg-6 login-left">
-										<img src="{% static 'assets/img/login-banner.png'%}" class="img-fluid" alt="Doccure Login">	
+										<img src="{% static 'assets/img/login-banner.png'%}" class="img-fluid" alt="Login Banner">	
 									</div>
 									<div class="col-md-12 col-lg-6 login-right">
 										<div class="login-header">
-											<h3>Login <span>Doccure</span></h3>
+											<h3>Forgot Password?</h3>
+											<p class="small text-muted">Enter your email to get a password reset link</p>
 										</div>
-										<form action="https://dreamguys.co.in/demo/doccure/index.html">
+										
+										<!-- Forgot Password Form -->
+										<form action="https://dreamguys.co.in/demo/doccure/login.html">
 											<div class="form-group form-focus">
 												<input type="email" class="form-control floating">
 												<label class="focus-label">Email</label>
 											</div>
-											<div class="form-group form-focus">
-												<input type="password" class="form-control floating">
-												<label class="focus-label">Password</label>
-											</div>
 											<div class="text-right">
-												<a class="forgot-link" href="{% url 'forgotPass' %}">Forgot Password ?</a>
+												<a class="forgot-link" href="login.html">Remember your password?</a>
 											</div>
-											<button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Login</button>
-											<div class="login-or">
-												<span class="or-line"></span>
-												<span class="span-or"></span>
-											</div>
-											
-											<div class="text-center dont-have">Don’t have an account? <a href="{% url 'register' %}">Register</a></div>
+											<button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Reset Password</button>
 										</form>
+										<!-- /Forgot Password Form -->
+										
 									</div>
 								</div>
 							</div>
-							<!-- /Login Tab Content -->
-								
+							<!-- /Account Content -->
+							
 						</div>
 					</div>
 
@@ -140,7 +135,8 @@
 										<img src="{% static 'assets/img/footer-logo.png'%}" alt="logo">
 									</div>
 									<div class="footer-about-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										<p>Dental clinics are usually found in hospitals, schools, government offices, and other health-related establishments. 
+                                            They are often associated with a university and serve to educate dentists in training.</p>
 										<div class="social-icon">
 											<ul>
 												<li>
@@ -187,7 +183,7 @@
 							
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-menu">
-									<h2 class="footer-title">For Doctors</h2>
+									<h2 class="footer-title">For Admin</h2>
 									<ul>
 										<li><a href="appointments.html"><i class="fas fa-angle-double-right"></i> Appointments</a></li>
 										<li><a href="chat.html"><i class="fas fa-angle-double-right"></i> Chat</a></li>
@@ -208,11 +204,11 @@
 									<div class="footer-contact-info">
 										<div class="footer-address">
 											<span><i class="fas fa-map-marker-alt"></i></span>
-											<p> 3556  Beech Street, San Francisco,<br> California, CA 94108 </p>
+											<p> JP Street, San Vicente, Calapan, Orrintal Mindoro<br> Philippines </p>
 										</div>
 										<p>
 											<i class="fas fa-phone-alt"></i>
-											+1 315 369 5943
+											+63 9637411286
 										</p>
 										<p class="mb-0">
 											<i class="fas fa-envelope"></i>
@@ -232,17 +228,7 @@
 				<!-- Footer Bottom -->
                 <div class="footer-bottom">
 					<div class="container-fluid">
-					
-						<!-- Copyright -->
-						<div class="copyright">
-							<div class="row">
-								<div class="col-md-6 col-lg-6">
-									<div class="copyright-text">
-										<p class="mb-0"><a href="templateshub.net">Templates Hub</a></p>
-									</div>
-								</div>
-								<div class="col-md-6 col-lg-6">
-								
+
 									<!-- Copyright Menu -->
 									<div class="copyright-menu">
 										<ul class="policy-menu">
@@ -279,5 +265,5 @@
 		
 	</body>
 
-<!-- doccure/login.html  30 Nov 2019 04:12:20 GMT -->
+<!-- doccure/forgot-password.html  30 Nov 2019 04:12:20 GMT -->
 </html>

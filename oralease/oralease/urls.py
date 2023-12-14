@@ -20,8 +20,14 @@ from dental import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('headnav', views.headnav, name='headnav'),
     path('', views.index, name='index'),
-    path('login', views.index, name='login'),
-    path('register', views.index, name='register'),
-    path('admin', views.index, name='admin'),
+    path('login', views.login, name='login'),
+    path('register', views.register, name='register'),
+    path('admin', views.admin, name='admin'),
+    path('forgotPass', views.forgotPass, name='forgotPass'),
+    path('appointmentAdmin', views.appointmentAdmin, name='appointmentAdmin'),
+    path('doctorsAdmin', views.doctorsAdmin, name='doctorsAdmin'),
+    path('patientAdmin', views.patientAdmin, name='patientAdmin'),
+    path('staffAdmin', views.staffAdmin, name='staffAdmin'),
 ]

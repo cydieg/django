@@ -21,6 +21,12 @@
 		
 		<!-- Main CSS -->
 		<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+		<!-- Mapping-->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+		<!-- Leaflet JavaScript -->
+		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -66,11 +72,11 @@
 							</div>
 							<div class="header-contact-detail">
 								<p class="contact-header">Contact</p>
-								<p class="contact-info-header"> +1 315 369 5943</p>
+								<p class="contact-info-header"> +63 9637411286</p>
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link header-login" href="login.html">login / Signup </a>
+							<a class="nav-link header-login" href="{% url 'login' %}">login / Signup </a>
 						</li>
 					</ul>
 				</nav>
@@ -82,26 +88,9 @@
 				<div class="container-fluid">
 					<div class="banner-wrapper">
 						<div class="banner-header text-center">
-							<h1>Search Doctor, Make an Appointment</h1>
+							<h1>Take the first step towards a healthier, more beautiful smile today.</h1>
 							<p>Discover the best doctors, clinic & hospital the city nearest to you.</p>
 						</div>
-                         
-						<!-- Search -->
-						<div class="search-box">
-							<form action="templateshub.net">
-								<div class="form-group search-location">
-									<input type="text" class="form-control" placeholder="Search Location">
-									<span class="form-text">Based on your Location</span>
-								</div>
-								<div class="form-group search-info">
-									<input type="text" class="form-control" placeholder="Search Doctors, Clinics, Hospitals, Diseases Etc">
-									<span class="form-text">Ex : Dental or Sugar Check up etc</span>
-								</div>
-								<button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Search</span></button>
-							</form>
-						</div>
-						<!-- /Search -->
-						
 					</div>
 				</div>
 			</section>
@@ -120,7 +109,6 @@
                 <div class="about-content">
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
                     <p>web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes</p>					
-                    <a href="javascript:;">Read More..</a>
                 </div>
             </div>
             <div class="col-lg-8">
@@ -385,12 +373,13 @@
 				<div class="container-fluid">
 				   <div class="row">
 						<div class="col-md-5 features-img">
-							<img src="{% static 'assets/img/features/feature.png' %}" class="img-fluid" alt="Feature">
-						</div>
+                			<!-- Replace the static image with a div for the map -->
+                			<div id="map" style="height: 400px;"></div>
+            			</div>
 						<div class="col-md-7">
 							<div class="section-header">	
 								<h2 class="mt-2">Availabe Features in Our Clinic</h2>
-								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+								<p> Dental Clinic can offer you an easy access to services that provide you a seamless interaction with the dental clinic.</p>
 							</div>	
 							<div class="features-slider slider">
 								<!-- Slider Item -->
@@ -410,29 +399,17 @@
 								<!-- Slider Item -->
 								<div class="feature-item text-center">
 									<img src="{% static 'assets/img/features/feature-03.jpg' %}" class="img-fluid" alt="Feature">
-									<p></p>
+									<p>Manage Users</p>
 								</div>
 								<!-- /Slider Item -->
 								
 								<!-- Slider Item -->
 								<div class="feature-item text-center">
 									<img src="{% static 'assets/img/features/feature-04.jpg'%}" class="img-fluid" alt="Feature">
-									<p>Laboratory</p>
+									<p>Manage Staff</p>
 								</div>
 								<!-- /Slider Item -->
 								
-								<!-- Slider Item -->
-								<div class="feature-item text-center">
-									<img src="{% static 'assets/img/features/feature-05.jpg'%}" class="img-fluid" alt="Feature">
-									<p>Operation</p>
-								</div>
-								<!-- /Slider Item -->
-								
-								<!-- Slider Item -->
-								<div class="feature-item text-center">
-									<img src="{% static 'assets/img/features/feature-06.jpg'%}" class="img-fluid" alt="Feature">
-									<p>Medical</p>
-								</div>
 								<!-- /Slider Item -->
 							</div>
 						</div>
@@ -457,7 +434,8 @@
 										<img src="{% static 'assets/img/footer-logo.png'%}" alt="logo">
 									</div>
 									<div class="footer-about-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										<p>Dental clinics are usually found in hospitals, schools, government offices, and other health-related establishments. 
+										   They are often associated with a university and serve to educate dentists in training. </p>
 										<div class="social-icon">
 											<ul>
 												<li>
@@ -504,7 +482,7 @@
 							
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-menu">
-									<h2 class="footer-title">For Doctors</h2>
+									<h2 class="footer-title">For Admin</h2>
 									<ul>
 										<li><a href="appointments.html"><i class="fas fa-angle-double-right"></i> Appointments</a></li>
 										<li><a href="chat.html"><i class="fas fa-angle-double-right"></i> Chat</a></li>
@@ -525,11 +503,11 @@
 									<div class="footer-contact-info">
 										<div class="footer-address">
 											<span><i class="fas fa-map-marker-alt"></i></span>
-											<p> 3556  Beech Street, San Francisco,<br> California, CA 94108 </p>
+											<p> JP Street, San Vicente, Calapan, Orrintal Mindoro<br> Philippines </p>
 										</div>
 										<p>
 											<i class="fas fa-phone-alt"></i>
-											+1 315 369 5943
+											+63 9637411286
 										</p>
 										<p class="mb-0">
 											<i class="fas fa-envelope"></i>
@@ -549,17 +527,6 @@
 				<!-- Footer Bottom -->
                 <div class="footer-bottom">
 					<div class="container-fluid">
-					
-						<!-- Copyright -->
-						<div class="copyright">
-							<div class="row">
-								<div class="col-md-6 col-lg-6">
-									<div class="copyright-text">
-										<p class="mb-0"><a href="templateshub.net">Templates Hub</a></p>
-									</div>
-								</div>
-								<div class="col-md-6 col-lg-6">
-								
 									<!-- Copyright Menu -->
 									<div class="copyright-menu">
 										<ul class="policy-menu">
@@ -597,6 +564,13 @@
 		<!-- Custom JS -->
 		<script src="{% static 'assets/js/script.js'%}"></script>
 		
+		<!--Mapping-->
+		<script>
+			var map = L.map('map').setView([12.8797, 121.7740], 10); // Set the initial coordinates and zoom level
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				attribution: '&copy; OpenStreetMap contributors'
+			}).addTo(map);
+		</script>
 	</body>
 
 <!-- doccure/  30 Nov 2019 04:11:53 GMT -->
